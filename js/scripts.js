@@ -18,32 +18,33 @@ $(document).ready(function() {
     if (number > 3999) {
       alert("Only numbers between 1 and 3,999 please");
     } else if (number <= 0){
-      alert("Only posative numbers please");
+      alert("Only positive numbers please");
     } else {
       for (var i = 0; i <= digit1.length; i++) {
         if (inputN[0] === i+1) {
-          alert(digit1[i]);
+          result.push(digit1[i]);
           break;
         };
       };
       for (var i = 0; i <= digit2.length; i++) {
         if (inputN[1] === i+1) {
-          alert(digit2[i]);
+          result.push(digit2[i]);
           break;
         };
       };
       for (var i = 0; i <= digit3.length; i++) {
         if (inputN[2] === i+1) {
-          alert(digit3[i]);
+          result.push(digit3[i]);
           break;
         };
       };
       for (var i = 0; i <= digit4.length; i++) {
         if (inputN[3] === i+1) {
-          alert(digit4[i]);
+          result.push(digit4[i]);
           break;
         };
       };
     };
+    $("#numerals").text(result.reverse().join(""));
   });
 });
